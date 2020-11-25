@@ -1,0 +1,43 @@
+{
+  "name": "otakustv",
+  "version": "1.0.0",
+  "description": "The Otakustv API is a content provider of the latest in the world of anime with sub in Spanish and free. Using as a reference the website otakustv.com, to extract the data.",
+  "main": "./src/api.js",
+  "scripts": {
+    "dev": "nodemon src/api.js"
+  },
+  "keywords": [
+    "otakustv",
+    "otakustv api"
+  ],
+  "author": {
+    "name": "Chris Michael",
+    "email": "chrisperezsantiago1@gmail.com",
+    "social": {
+      "github": "https://github.com/ChrisMichaelPerezSantiago",
+      "twitter": "https://twitter.com/Chris5855M"
+    }
+  },
+  "contributors": [
+    {
+      "name": "Chris Michael",
+      "url": "https://github.com/ChrisMichaelPerezSantiago",
+      "reason": "Project Leader, and Developer"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/ChrisMichaelPerezSantiago/otakustv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisMichaelPerezSantiago/otakustv.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "lodash": "^4.17.20",
+    "nodemon": "^2.0.6",
+    "qs": "^6.9.4"
+  }
+}
