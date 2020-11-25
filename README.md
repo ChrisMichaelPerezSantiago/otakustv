@@ -12,9 +12,9 @@
   <img src="https://img.shields.io/badge/Otakustv-API-brightgreen.svg"/>
 </p>
 
-<!-- <p align="center">
+<p align="center">
  <a href="https://nodei.co/npm/otakustv/"><img src="https://nodei.co/npm/otakustv.png"></a>
-</p> -->
+</p> 
 
 
 
