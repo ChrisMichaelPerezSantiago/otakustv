@@ -3,7 +3,6 @@ const { req } = require('./util/fetch');
 const axios = require('axios').default;
 const qs = require('qs');
 const _ = require('lodash');
-const { reject } = require('lodash');
 
 const getServers = async(id) =>{
   return new Promise(async(resolve, reject) =>{
@@ -437,6 +436,11 @@ const search = async(query) =>{
 
   return Promise.all(_data);
 }; 
+
+(async() =>{
+  const data = await getServers('/anime/tokyo-ghoul/episodio-12/');
+  console.log(data)
+})();
 
 module.exports = {
   getServers,
