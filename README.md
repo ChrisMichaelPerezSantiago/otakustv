@@ -28,12 +28,38 @@ To access the servers you must use the `eps_id` property that you will find unde
 
 ```js
 (async() =>{
-  const data = await getServers('/anime/tokyo-ghoul/episodio-12/');
+  const data = await getServers(eps_id = '/anime/tokyo-ghoul/episodio-12/');
 })();
 ```
 
 ```json
 "https://drive.google.com/file/d/1ImYmj21QXMmqqd4dpBEU8KMnRSGi5o6_/preview"
+```
+
+## donwloadEpisode([eps_id])
+To download the eposide you must use the `eps_id` property that you will find under the `episodes` array. 
+
+```js
+(async() =>{
+  const data = await donwloadEpisode(eps_id = '/anime/tokyo-ghoul/episodio-12/');
+})();
+```
+
+```json
+[
+  {
+    url: 'https://mega.nz/file/u9wkwAKb#z-ojeXqQXWU9VhtqoKK2FWiEYCw2xEgOeg5MSsIjklo',
+    option: 'Descargar 1'
+  },
+  {
+    url: 'https://mega.nz/file/u9wkwAKb#z-ojeXqQXWU9VhtqoKK2FWiEYCw2xEgOeg5MSsIjklo',
+    option: 'Descargar 2'
+  },
+  {
+    url: 'https://mega.nz/file/u9wkwAKb#z-ojeXqQXWU9VhtqoKK2FWiEYCw2xEgOeg5MSsIjklo',
+    option: 'Descargar 3'
+  }
+]
 ```
   
 ## premiereEpisodes()

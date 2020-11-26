@@ -3,6 +3,7 @@ const { req } = require('./util/fetch');
 const axios = require('axios').default;
 const qs = require('qs');
 const _ = require('lodash');
+const { reject } = require('lodash');
 
 const getServers = async(id) =>{
   return new Promise(async(resolve, reject) =>{
@@ -16,6 +17,27 @@ const getServers = async(id) =>{
       reject(err);  
     }
   });
+};
+
+const donwloadEpisode = async(id) =>{
+  const fixedID = id && id.replace('anime', 'descargar');
+  const res = await req(fixedID);
+  const $ = load(res);
+  const data = $('body div.bloque_download div.row div.col-sm-6.text-right').map((index, element) => new Promise((resolve, reject) =>{
+    try {
+      const $element = $(element);
+      const url = $element.find('a').attr('href');
+      const option = $element.find('a').text();
+      resolve({
+        url,
+        option
+      });
+    } catch (error) {
+      reject(error); 
+    }
+  })).get();
+
+  return Promise.all(data);
 };
 
 const episodes = async(id = 'tokyo-ghoul') =>{
@@ -426,5 +448,6 @@ module.exports = {
   recentlyAdded,
   premieresAnime,
   queries,
-  search
+  search,
+  donwloadEpisode
 };
