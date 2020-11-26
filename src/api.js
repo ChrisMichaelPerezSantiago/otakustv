@@ -437,11 +437,6 @@ const search = async(query) =>{
   return Promise.all(_data);
 }; 
 
-(async() =>{
-  const data = await getServers('/anime/tokyo-ghoul/episodio-12/');
-  console.log(data)
-})();
-
 module.exports = {
   getServers,
   premiereEpisodes,
